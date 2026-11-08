@@ -28,12 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnListen = new Button();
+            rtbCommand = new RichTextBox();
+            SuspendLayout();
+            // 
+            // btnListen
+            // 
+            btnListen.Location = new Point(624, 29);
+            btnListen.Name = "btnListen";
+            btnListen.Size = new Size(115, 41);
+            btnListen.TabIndex = 0;
+            btnListen.Text = "Listen";
+            btnListen.UseVisualStyleBackColor = true;
+            btnListen.Click += btnListen_Click;
+            // 
+            // rtbCommand
+            // 
+            rtbCommand.Location = new Point(59, 101);
+            rtbCommand.Name = "rtbCommand";
+            rtbCommand.ReadOnly = true;
+            rtbCommand.Size = new Size(685, 316);
+            rtbCommand.TabIndex = 1;
+            rtbCommand.Text = "";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(rtbCommand);
+            Controls.Add(btnListen);
+            Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnListen;
+        private RichTextBox rtbCommand;
     }
 }
