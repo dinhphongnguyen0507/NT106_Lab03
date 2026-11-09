@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnOpenServer = new Button();
+            btnOpenClient = new Button();
+            SuspendLayout();
+            // 
+            // btnOpenServer
+            // 
+            btnOpenServer.Location = new Point(189, 85);
+            btnOpenServer.Name = "btnOpenServer";
+            btnOpenServer.Size = new Size(403, 71);
+            btnOpenServer.TabIndex = 0;
+            btnOpenServer.Text = "OPEN SERVER";
+            btnOpenServer.UseVisualStyleBackColor = true;
+            btnOpenServer.Click += btnOpenServer_Click;
+            // 
+            // btnOpenClient
+            // 
+            btnOpenClient.Location = new Point(189, 218);
+            btnOpenClient.Name = "btnOpenClient";
+            btnOpenClient.Size = new Size(403, 71);
+            btnOpenClient.TabIndex = 1;
+            btnOpenClient.Text = "OPEN CLIENT";
+            btnOpenClient.UseVisualStyleBackColor = true;
+            btnOpenClient.Click += btnOpenClient_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Text = "Form1";
+            Controls.Add(btnOpenClient);
+            Controls.Add(btnOpenServer);
+            Name = "Form1";
+            Text = "Chat Room - Group 6";
+            Load += Form1_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnOpenServer;
+        private Button btnOpenClient;
     }
 }
